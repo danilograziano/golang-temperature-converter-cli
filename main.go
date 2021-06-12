@@ -27,7 +27,8 @@ func main() {
 	originUnit = strings.ToUpper(os.Args[1])
 
 	for {
-		var descOriginUnit strinif originUnit == "C" {
+		var descOriginUnit string
+		if originUnit == "C" {
 			descOriginUnit = "Celsius"
 
 		} else {
