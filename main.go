@@ -27,7 +27,14 @@ func main() {
 	originUnit = strings.ToUpper(os.Args[1])
 
 	for {
-		fmt.Print("What is the current temperature in " + originUnit + " ? ")
+		var descOriginUnit strinif originUnit == "C" {
+			descOriginUnit = "Celsius"
+
+		} else {
+			descOriginUnit = "Fahrenheit"
+
+		}
+		fmt.Print("Qual è la temperatura esterna in " + descOriginUnit + " ? ")
 		_, err = fmt.Scanln(&originValue)
 		if err != nil {
 
@@ -42,7 +49,7 @@ func main() {
 			convertToCelsius(originValue)
 		}
 
-		fmt.Print("Would you like to convert another temperature ? (y/n) ")
+		fmt.Print("Vuoi convertire un'altra temperatura ? (y/n) ")
 
 		_, err = fmt.Scanln(&shouldConvertAgain)
 		if err != nil {
